@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 84.9155, 94.2423 )
+
+[node name="TilesetRes" type="Node2D"]
+
+[node name="Tile001" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 15.4916, 62.9335, 160.946, 191.859 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile001"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile001/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile002" type="Sprite" parent="."]
+position = Vector2( 126.992, 1.5874 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16.078, 255.59, 160.329, 191.195 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile002"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile002/StaticBody2D"]
+position = Vector2( 0.872314, 0.300797 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile003" type="Sprite" parent="."]
+position = Vector2( 255.992, 2.5874 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 15.9975, 448.368, 161.547, 190.526 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile003"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile003/StaticBody2D"]
+position = Vector2( -0.127686, 1.3008 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile004" type="Sprite" parent="."]
+position = Vector2( 386.198, 2.5874 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 15.2526, 639.758, 161.72, 191.009 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile004"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile004/StaticBody2D"]
+position = Vector2( 0.335449, 1.24773 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
