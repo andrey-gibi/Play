@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=2]
 [ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=3]
 [ext_resource path="res://Backround-s/4.jpg" type="Texture" id=4]
+[ext_resource path="res://Ment.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Level1.gd" type="Script" id=8]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Object-s" type="Node2D" parent="."]
 
@@ -19,7 +22,7 @@ region_rect = Rect2( 404.004, 999.743, 636.38, 595.181 )
 position = Vector2( 1837.76, 198.003 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 1214.85, -4.33943, 132.646, 390.401 )
+region_rect = Rect2( 1214.85, -4.33943, 128.131, 390.401 )
 
 [node name="Sprite3" type="Sprite" parent="Object-s"]
 position = Vector2( 1371.76, 546.84 )
@@ -30,11 +33,16 @@ region_rect = Rect2( 1030.95, 46.9101, 162.793, 81.3963 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 267.224, 401.549 )
 
+[node name="Ment" parent="." instance=ExtResource( 5 )]
+position = Vector2( 640.572, 458.586 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 160, 195 )
+collision_layer = 3
+collision_mask = 3
 format = 1
-tile_data = PoolIntArray( 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0 )
+tile_data = PoolIntArray( 65536, 1, 0, 65549, 2, 0, 65555, 1, 0, 131072, 1, 0, 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 131085, 2, 0, 131086, 2, 0, 131091, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0, 0 )
@@ -42,6 +50,6 @@ scroll_base_scale = Vector2( 0, 0 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 539.997, 359.99 )
-scale = Vector2( 0.843734, 1.00002 )
+position = Vector2( 539.95, 269.665 )
+scale = Vector2( 0.843734, 0.75098 )
 texture = ExtResource( 4 )
