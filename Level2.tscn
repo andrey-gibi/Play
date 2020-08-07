@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=1]
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=2]
+[ext_resource path="res://Backround-s/fonon2lvl.png" type="Texture" id=3]
+[ext_resource path="res://Ment.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Area2D2.gd" type="Script" id=6]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 7094.57, 105.783 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 425.503, 1023.7, 601.558, 572.408 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D/Sprite"]
+polygon = PoolVector2Array( -57.6421, 285.319, -57.6421, 172.639, -27.3696, 128.912, 9.62988, 120.503, 51.6743, 133.957, 51.6743, 133.957, 76.9014, 179.366, 76.9014, 287.001 )
+
+[node name="Object-s" type="Node2D" parent="."]
+
+[node name="House" type="Sprite" parent="Object-s"]
+position = Vector2( 442.25, 294.085 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 437.35, 1003.92, 599.175, 583.197 )
+
+[node name="Stoyn" type="Sprite" parent="Object-s"]
+position = Vector2( 2188.41, 878.515 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 381.666, 1596.16, 131.178, 199.768 )
+
+[node name="Stoyn2" type="Sprite" parent="Object-s"]
+position = Vector2( 2188.41, 684.615 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 381.666, 1596.16, 131.178, 199.768 )
+
+[node name="Stoyn3" type="Sprite" parent="Object-s"]
+position = Vector2( 2186.03, 494.342 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 381.666, 1596.16, 131.178, 199.768 )
+
+[node name="Stoyn4" type="Sprite" parent="Object-s"]
+position = Vector2( 2783.02, 882.023 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 253.917, 1593.59, 130.321, 202.341 )
+
+[node name="Stoyn5" type="Sprite" parent="Object-s"]
+position = Vector2( 2783.02, 691.141 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 253.917, 1593.59, 130.321, 202.341 )
+
+[node name="Stoyn6" type="Sprite" parent="Object-s"]
+position = Vector2( 3597.27, 688.471 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 640.594, 1601.3, 129.464, 186.908 )
+
+[node name="Stoyn7" type="Sprite" parent="Object-s"]
+position = Vector2( 3597.27, 504.263 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 640.594, 1601.3, 129.464, 186.908 )
+
+[node name="Stoyn8" type="Sprite" parent="Object-s"]
+position = Vector2( 3599.94, 328.064 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 640.594, 1601.3, 129.464, 186.908 )
+
+[node name="Stoyn9" type="Sprite" parent="Object-s"]
+position = Vector2( 3599.94, 146.841 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 640.594, 1601.3, 129.464, 186.908 )
+
+[node name="Stoyn10" type="Sprite" parent="Object-s"]
+position = Vector2( 3364.31, 920.777 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1464.71, 1409.44, 149.055, 127.877 )
+
+[node name="Stoyn11" type="Sprite" parent="Object-s"]
+position = Vector2( 4379.05, 107.293 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1051.78, 1346.17, 145.302, 198.55 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 439.798, 498.452 )
+
+[node name="Ment" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1034.48, 495.932 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 160, 195 )
+format = 1
+tile_data = PoolIntArray( 47, 0, 0, 65536, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65566, 0, 0, 65567, 0, 0, 65568, 0, 0, 65569, 0, 0, 65570, 0, 0, 65571, 0, 0, 65572, 0, 0, 65573, 0, 0, 65583, 0, 0, 131072, 0, 0, 131096, 0, 0, 131097, 0, 0, 131108, 0, 0, 131109, 0, 0, 131110, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 262154, 0, 0, 262155, 0, 0, 262166, 0, 0, 262167, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327702, 0, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 539.993, 269.982 )
+scale = Vector2( 0.562474, 0.539967 )
+texture = ExtResource( 3 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

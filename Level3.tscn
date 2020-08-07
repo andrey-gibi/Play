@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Backround-s/Lvl3Fon-s.png" type="Texture" id=1]
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=4]
+[ext_resource path="res://Finsh.gd" type="Script" id=5]
+[ext_resource path="res://Ment.tscn" type="PackedScene" id=6]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Finsh" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Finsh"]
+position = Vector2( 9213.53, 1232.77 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 431.503, 1010.3, 606.858, 588.308 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Finsh"]
+polygon = PoolVector2Array( 9147.06, 1520.31, 9147.95, 1415.18, 9171.11, 1372.42, 9216.1, 1357.27, 9259.31, 1373.75, 9282.03, 1413.4, 9282.47, 1520.31 )
+
+[node name="Ment" parent="Finsh" instance=ExtResource( 6 )]
+position = Vector2( 559.945, 483.249 )
+
+[node name="Object-s" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Object-s"]
+position = Vector2( -49.3883, 282.86 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 439.097, 1012.98, 602.697, 581.173 )
+
+[node name="Sprite2" type="Sprite" parent="Object-s"]
+position = Vector2( 2754.21, 460.647 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1229.05, 1285.98, 102.639, 276.425 )
+
+[node name="Sprite3" type="Sprite" parent="Object-s"]
+position = Vector2( 5023.01, 458.944 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1229.05, 1285.98, 102.639, 276.425 )
+
+[node name="Sprite4" type="Sprite" parent="Object-s"]
+position = Vector2( 7290.59, 462.004 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1229.05, 1285.98, 102.639, 276.425 )
+
+[node name="Sprite5" type="Sprite" parent="Object-s"]
+position = Vector2( 8489.4, 1431.01 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1044.87, 832.372, 133.825, 192.104 )
+
+[node name="Sprite6" type="Sprite" parent="Object-s"]
+position = Vector2( 7677.4, 855.013 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1044.87, 832.372, 133.825, 192.104 )
+
+[node name="Sprite9" type="Sprite" parent="Object-s"]
+position = Vector2( 6015.18, 1488.35 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1470.52, 703.603, 138.037, 68.59 )
+
+[node name="Sprite10" type="Sprite" parent="Object-s"]
+position = Vector2( 6141.05, 1488.35 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1470.52, 703.603, 138.037, 68.59 )
+
+[node name="Sprite11" type="Sprite" parent="Object-s"]
+position = Vector2( 6273.99, 1488.35 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1470.52, 703.603, 138.037, 68.59 )
+
+[node name="Sprite12" type="Sprite" parent="Object-s"]
+position = Vector2( 6412.58, 1488.35 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1470.52, 703.603, 138.037, 68.59 )
+
+[node name="Sprite13" type="Sprite" parent="Object-s"]
+position = Vector2( 5892.15, 1486.94 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1470.52, 703.603, 138.037, 68.59 )
+
+[node name="Sprite14" type="Sprite" parent="Object-s"]
+position = Vector2( 5747.51, 1248.12 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1340.32, 836.059, 69.7186, 200.953 )
+
+[node name="Sprite15" type="Sprite" parent="Object-s"]
+position = Vector2( 5594.44, 1056.91 )
+scale = Vector2( 0.999997, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1340.32, 836.059, 69.7186, 200.953 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -56.0632, 493.891 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 162, 190 )
+format = 1
+tile_data = PoolIntArray( 131067, 2, 0, 196603, 2, 0, 262139, 2, 0, 262140, 2, 0, 262141, 2, 0, 262142, 2, 0, 262143, 2, 0, 196608, 2, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 2, 0, 196624, 2, 0, 196625, 2, 0, 196638, 2, 0, 196639, 2, 0, 196652, 2, 0, 196653, 2, 0, 262148, 2, 0, 262149, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0, 262173, 2, 0, 262174, 2, 0, 262175, 2, 0, 262176, 2, 0, 262187, 2, 0, 262188, 2, 0, 262189, 2, 0, 262190, 2, 0, 327685, 2, 0, 327686, 2, 0, 327694, 2, 0, 327695, 2, 0, 327698, 2, 0, 327699, 2, 0, 327708, 2, 0, 327709, 2, 0, 327712, 2, 0, 327713, 2, 0, 327722, 2, 0, 327723, 2, 0, 327726, 2, 0, 327727, 2, 0, 393222, 2, 0, 393223, 2, 0, 393229, 2, 0, 393230, 2, 0, 393235, 2, 0, 393236, 2, 0, 393243, 2, 0, 393244, 2, 0, 393249, 2, 0, 393250, 2, 0, 393257, 2, 0, 393258, 2, 0, 393263, 2, 0, 393264, 2, 0, 393276, 2, 0, 458759, 2, 0, 458760, 2, 0, 458764, 2, 0, 458765, 2, 0, 458772, 2, 0, 458773, 2, 0, 458778, 2, 0, 458779, 2, 0, 458786, 2, 0, 458787, 2, 0, 458792, 2, 0, 458793, 2, 0, 458800, 2, 0, 458801, 2, 0, 458812, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524309, 2, 0, 524310, 2, 0, 524311, 2, 0, 524312, 2, 0, 524313, 2, 0, 524314, 2, 0, 524323, 2, 0, 524324, 2, 0, 524325, 2, 0, 524326, 2, 0, 524327, 2, 0, 524328, 2, 0, 524337, 2, 0, 524338, 2, 0, 524339, 2, 0, 524340, 2, 0, 524341, 2, 0, 524342, 2, 0, 524343, 2, 0, 524344, 2, 0, 524345, 2, 0, 524346, 2, 0, 524347, 2, 0, 524348, 2, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 539.978, 269.99 )
+scale = Vector2( 0.675, 0.600045 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="Finsh" to="Finsh" method="_on_Finsh_body_entered"]

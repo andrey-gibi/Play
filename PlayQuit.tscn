@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://19755.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://PlayQuit.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://19755.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+fallback/0 = SubResource( 1 )
+
+[node name="PlayQuit" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" type="Button" parent="CanvasLayer"]
+margin_left = 0.756308
+margin_top = 1.19428
+margin_right = 155.756
+margin_bottom = 48.1943
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Menu"]
+margin_right = 51.0
+margin_bottom = 17.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 2 )
+text = "MENU"
+align = 1
+valign = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Restart" type="Button" parent="CanvasLayer2"]
+margin_left = 0.878387
+margin_top = 52.3602
+margin_right = 227.878
+margin_bottom = 99.3602
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer2"]
+margin_left = 1.31938
+margin_top = 53.7178
+margin_right = 76.3194
+margin_bottom = 70.7178
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 2 )
+text = "RESTART"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

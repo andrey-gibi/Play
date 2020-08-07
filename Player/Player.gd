@@ -10,6 +10,10 @@ var is_firing = false
 var is_dead = false
 var velocity = Vector2()
 
+var touch_left = false
+var touch_right = false
+var touch_jump = false
+
 var coins = 0
 
 func add_coin():
@@ -27,13 +31,13 @@ func _physics_process(delta):
 		position.y = 0
 	if is_firing == true:
 		return
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") or touch_right:
 		velocity.x = SPEED
 		$AnimatedSprite.flip_h = false
 		$Position2D.position.x = abs($Position2D.position.x)
 		if is_on_floor():
 			$AnimatedSprite.play("run")
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left") or touch_left:
 		velocity.x = -SPEED
 		$AnimatedSprite.flip_h = true
 		$Position2D.position.x = abs($Position2D.position.x) * -1
@@ -44,7 +48,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			$AnimatedSprite.play("idle")
 	
-	if Input.is_action_pressed("ui_up") && is_on_floor():
+	if Input.is_action_pressed("ui_up") && is_on_floor() or touch_jump:
 		velocity.y = -JUMP
 		$AnimatedSprite.play("jump")
 	
@@ -64,3 +68,24 @@ func _on_AnimatedSprite_animation_finished():
 		pulya.position = $Position2D.global_position
 		get_parent().add_child(pulya)
 		is_firing = false
+
+
+func _on_Left_pressed():
+	touch_left = true
+
+
+func _on_Right_pressed():
+	touch_right = true
+
+
+func _on_Jump_pressed():
+	touch_jump = true
+
+
+
+func _on_Left_released():
+	touch_left = false
+
+
+func _on_Right_released():
+	touch_right = false

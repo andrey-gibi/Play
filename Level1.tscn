@@ -1,0 +1,125 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=2]
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=3]
+[ext_resource path="res://Backround-s/4.jpg" type="Texture" id=4]
+[ext_resource path="res://Ment.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/Level1.gd" type="Script" id=8]
+[ext_resource path="res://Strelki/icon_64R.png" type="Texture" id=9]
+[ext_resource path="res://Strelki/icon_64L.png" type="Texture" id=10]
+[ext_resource path="res://Strelki/icon_64U.png" type="Texture" id=11]
+[ext_resource path="res://PlayQuit.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Area2D.gd" type="Script" id=13]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Object-s" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Object-s"]
+position = Vector2( 446.89, 287.022 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 404.004, 999.743, 636.38, 595.181 )
+
+[node name="Sprite2" type="Sprite" parent="Object-s"]
+position = Vector2( 1837.76, 198.003 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1214.85, -4.33943, 128.131, 390.401 )
+
+[node name="Sprite3" type="Sprite" parent="Object-s"]
+position = Vector2( 1371.76, 546.84 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1030.95, 46.9101, 162.793, 81.3963 )
+
+[node name="Ment" parent="." instance=ExtResource( 5 )]
+position = Vector2( 640.572, 458.586 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="Home" type="Sprite" parent="Area2D"]
+position = Vector2( 2722.46, 300.81 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 413.961, 1020.44, 620.108, 575.058 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 2666.43, 584.883, 2667.27, 474.726, 2689.14, 435.204, 2731.18, 419.227, 2775.75, 431.84, 2800.98, 472.203, 2802.66, 586.565, 2802.66, 586.565 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 267.224, 401.549 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 160, 195 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 65536, 1, 0, 65549, 2, 0, 65555, 1, 0, 131072, 1, 0, 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 131085, 2, 0, 131086, 2, 0, 131091, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 539.95, 269.665 )
+scale = Vector2( 0.843734, 0.75098 )
+texture = ExtResource( 4 )
+
+[node name="Coin" parent="." instance=ExtResource( 6 )]
+position = Vector2( 445.281, 536.893 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 925.281, 544.893 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1057.28, 548.893 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1497.28, 552.893 )
+
+[node name="Coin5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2045.28, 368.893 )
+
+[node name="Coin6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2221.28, 172.893 )
+
+[node name="Coin7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2473.28, 544.893 )
+
+[node name="Coin8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3027.36, 549.933 )
+
+[node name="Stats" parent="." instance=ExtResource( 7 )]
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="GamePad" type="Node2D" parent="Hud"]
+
+[node name="Left" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 37.7976, 468.691 )
+normal = ExtResource( 10 )
+
+[node name="Right" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 153.71, 468.691 )
+normal = ExtResource( 9 )
+
+[node name="Jump" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 988.194, 465.172 )
+normal = ExtResource( 11 )
+
+[node name="PlayQuit" parent="." instance=ExtResource( 12 )]
+position = Vector2( 162.768, 456.749 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="pressed" from="Hud/GamePad/Left" to="Player" method="_on_Left_pressed"]
+[connection signal="released" from="Hud/GamePad/Left" to="Player" method="_on_Left_released"]
+[connection signal="pressed" from="Hud/GamePad/Right" to="Player" method="_on_Right_pressed"]
+[connection signal="released" from="Hud/GamePad/Right" to="Player" method="_on_Right_released"]
+[connection signal="pressed" from="Hud/GamePad/Jump" to="Player" method="_on_Jump_pressed"]

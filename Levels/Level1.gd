@@ -12,5 +12,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	$Sk/CanvasLayer/Label.text = str($Player.coins)
+func _process(delta):
+	$Stats/CanvasLayer/Label.text = str($Player.coins)

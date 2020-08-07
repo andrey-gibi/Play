@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://19755.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Knopki.gd" type="Script" id=2]
+[ext_resource path="res://Backround-s/5.jpg" type="Texture" id=3]
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://19755.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+fallback/0 = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://19755.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+fallback/0 = SubResource( 3 )
+
+[node name="Menu" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 540.008, 269.981 )
+scale = Vector2( 0.674989, 0.599987 )
+texture = ExtResource( 3 )
+
+[node name="Object" type="Node2D" parent="."]
+
+[node name="House" type="Sprite" parent="Object"]
+position = Vector2( 163.693, 396.342 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 418.169, 1016.65, 622.061, 574.639 )
+
+[node name="Streth" type="Sprite" parent="Object"]
+position = Vector2( 131.007, 60.0253 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -5.83643, 1410.63, 135.583, 243.767 )
+
+[node name="Streth2" type="Sprite" parent="Object"]
+position = Vector2( 893.951, 61.3059 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 137.911, 1407.13, 114.302, 249.599 )
+
+[node name="House2" type="Sprite" parent="Object"]
+position = Vector2( 901.143, 397.903 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 418.169, 1016.65, 622.061, 574.639 )
+
+[node name="Knopki" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Play" type="Button" parent="Knopki"]
+margin_left = 397.0
+margin_top = 116.0
+margin_right = 667.0
+margin_bottom = 213.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Knopki"]
+margin_left = 397.0
+margin_top = 295.952
+margin_right = 667.0
+margin_bottom = 392.952
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Knopki"]
+margin_left = 397.0
+margin_top = 116.0
+margin_right = 464.0
+margin_bottom = 140.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+text = "PLAY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Knopki"]
+margin_left = 398.291
+margin_top = 296.104
+margin_right = 465.291
+margin_bottom = 320.104
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 4 )
+text = "QUIT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
