@@ -5,21 +5,21 @@
 [ext_resource path="res://Backround-s/fonon2lvl.png" type="Texture" id=3]
 [ext_resource path="res://Ment.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Area2D2.gd" type="Script" id=6]
+[ext_resource path="res://SP.gd" type="Script" id=6]
 
 [node name="Level2" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SP" type="Area2D" parent="."]
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
-position = Vector2( 7094.57, 105.783 )
+[node name="House2" type="Sprite" parent="SP"]
+position = Vector2( 7197.94, 104.048 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 425.503, 1023.7, 601.558, 572.408 )
+region_rect = Rect2( 437.35, 1003.92, 599.175, 583.197 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D/Sprite"]
-polygon = PoolVector2Array( -57.6421, 285.319, -57.6421, 172.639, -27.3696, 128.912, 9.62988, 120.503, 51.6743, 133.957, 51.6743, 133.957, 76.9014, 179.366, 76.9014, 287.001 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP"]
+polygon = PoolVector2Array( 7129.69, 390.456, 7130.44, 292.317, 7140.93, 266.846, 7155.16, 250.365, 7176.14, 237.629, 7197.86, 236.88, 7224.83, 242.124, 7242.06, 256.358, 7255.55, 271.341, 7263.79, 295.314, 7263.79, 393.453 )
 
 [node name="Object-s" type="Node2D" parent="."]
 
@@ -116,4 +116,4 @@ scroll_base_scale = Vector2( 0, 0 )
 position = Vector2( 539.993, 269.982 )
 scale = Vector2( 0.562474, 0.539967 )
 texture = ExtResource( 3 )
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="SP" to="SP" method="_on_SP_body_entered"]

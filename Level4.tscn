@@ -1,0 +1,125 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=1]
+[ext_resource path="res://Backround-s/Fonongameover.jpeg" type="Texture" id=2]
+[ext_resource path="res://Tileset-s/Tiles.png" type="Texture" id=3]
+[ext_resource path="res://SP1.gd" type="Script" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ment.tscn" type="PackedScene" id=6]
+
+[node name="Level4" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 539.99, 269.998 )
+scale = Vector2( 3.59985, 3.21415 )
+texture = ExtResource( 2 )
+
+[node name="Object-s" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Object-s"]
+position = Vector2( -1698.35, 686.405 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 430.434, 1016.69, 608.853, 581.094 )
+
+[node name="Sprite2" type="Sprite" parent="Object-s"]
+position = Vector2( -614.401, 961.096 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite3" type="Sprite" parent="Object-s"]
+position = Vector2( -866.415, 962.04 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite4" type="Sprite" parent="Object-s"]
+position = Vector2( -1112.3, 961.149 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite5" type="Sprite" parent="Object-s"]
+position = Vector2( -1352.79, 962.736 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite6" type="Sprite" parent="Object-s"]
+position = Vector2( -1604.91, 962.736 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite7" type="Sprite" parent="Object-s"]
+position = Vector2( -1849.88, 961.987 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 382.027, 100.471, 262.615, 28.0987 )
+
+[node name="Sprite8" type="Sprite" parent="Object-s"]
+position = Vector2( -2052.15, 961.987 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 480.913, 100.471, 163.729, 28.0987 )
+
+[node name="Sprite9" type="Sprite" parent="Object-s"]
+position = Vector2( 812.673, 361.702 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 577.097, 130.731, 62.6818, 62.1414 )
+
+[node name="Sprite10" type="Sprite" parent="Object-s"]
+position = Vector2( 549.63, 551.202 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 410, -10, 202, 80 )
+
+[node name="Sprite11" type="Sprite" parent="Object-s"]
+position = Vector2( 413.405, 549.52 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 410, -10, 202, 80 )
+
+[node name="Sprite12" type="Sprite" parent="Object-s"]
+position = Vector2( 1033.4, 519.52 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 642, -10, 62, 145 )
+
+[node name="Sprite13" type="Sprite" parent="Object-s"]
+position = Vector2( 2277.09, 950.546 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 425.732, 447.033, 189.945, 79.8634 )
+
+[node name="SP1" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="SP1"]
+position = Vector2( 5041.01, 1280.79 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 430.434, 1016.69, 608.853, 581.094 )
+
+[node name="Player" parent="SP1/Sprite2" instance=ExtResource( 5 )]
+position = Vector2( -6739.81, -381.803 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP1"]
+polygon = PoolVector2Array( 4974, 1560, 4974.5, 1465, 4999.5, 1417, 5045, 1402.5, 5085, 1417, 5109, 1462, 5110, 1561 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 162, 195 )
+format = 1
+tile_data = PoolIntArray( -131044, 3, 0, -131043, 3, 0, -131042, 3, 0, -65509, 3, 0, -65508, 3, 0, -65506, 3, 0, -65505, 3, 0, 26, 3, 0, 27, 3, 0, 31, 3, 0, 32, 3, 0, 65556, 3, 0, 65557, 3, 0, 65558, 3, 0, 65561, 3, 0, 65562, 3, 0, 65568, 3, 0, 65569, 3, 0, 196607, 3, 0, 131072, 3, 0, 131073, 3, 0, 131076, 3, 0, 131077, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 131094, 3, 0, 131095, 3, 0, 131096, 3, 0, 131097, 3, 0, 131105, 3, 0, 131106, 3, 0, 131107, 3, 0, 262130, 3, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0, 196614, 3, 0, 196625, 3, 0, 196626, 3, 0, 196643, 3, 0, 196644, 3, 0, 196648, 3, 0, 327666, 3, 0, 327677, 3, 0, 327678, 3, 0, 262150, 3, 0, 262160, 3, 0, 262161, 3, 0, 262180, 3, 0, 262184, 3, 0, 393202, 3, 0, 393203, 3, 0, 393204, 3, 0, 393205, 3, 0, 393206, 3, 0, 393207, 3, 0, 393208, 3, 0, 393209, 3, 0, 393210, 3, 0, 393211, 3, 0, 393212, 3, 0, 393213, 3, 0, 393214, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327720, 3, 0, 393244, 3, 0, 393256, 3, 0, 458780, 3, 0, 458792, 3, 0, 524316, 3, 0, 524317, 3, 0, 524318, 3, 0, 524319, 3, 0, 524320, 3, 0, 524321, 3, 0, 524322, 3, 0, 524323, 3, 0, 524324, 3, 0, 524325, 3, 0, 524326, 3, 0, 524327, 3, 0, 524328, 3, 0 )
+
+[node name="Ment" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1061.76, 884.917 )
+[connection signal="body_entered" from="SP1" to="SP1" method="_on_SP1_body_entered"]
