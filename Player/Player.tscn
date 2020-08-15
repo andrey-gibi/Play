@@ -87,4 +87,7 @@ smoothing_enabled = true
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 4.38162, -0.211328 )
 scale = Vector2( 3, 3 )
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

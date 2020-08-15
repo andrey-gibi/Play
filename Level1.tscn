@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tileset-s/TileMap.tres" type="TileSet" id=2]
@@ -8,12 +8,14 @@
 [ext_resource path="res://Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Levels/Level1.gd" type="Script" id=8]
-[ext_resource path="res://Strelki/icon_64R.png" type="Texture" id=9]
-[ext_resource path="res://Strelki/icon_64L.png" type="Texture" id=10]
-[ext_resource path="res://Strelki/icon_64U.png" type="Texture" id=11]
+[ext_resource path="res://Buttons/left.png" type="Texture" id=9]
+[ext_resource path="res://Buttons/fire.png" type="Texture" id=10]
+[ext_resource path="res://Buttons/right.png" type="Texture" id=11]
 [ext_resource path="res://PlayQuit.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Area2D.gd" type="Script" id=13]
 [ext_resource path="res://Pila.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Buttons/up.png" type="Texture" id=15]
+[ext_resource path="res://Buttons/speeding.png" type="Texture" id=16]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 8 )
@@ -108,16 +110,28 @@ position = Vector2( 3027.36, 549.933 )
 [node name="GamePad" type="Node2D" parent="Hud"]
 
 [node name="Left" type="TouchScreenButton" parent="Hud/GamePad"]
-position = Vector2( 37.7976, 468.691 )
-normal = ExtResource( 10 )
-
-[node name="Right" type="TouchScreenButton" parent="Hud/GamePad"]
-position = Vector2( 153.71, 468.691 )
+position = Vector2( 16.0155, 385.716 )
+scale = Vector2( 0.6, 0.6 )
 normal = ExtResource( 9 )
 
-[node name="Jump" type="TouchScreenButton" parent="Hud/GamePad"]
-position = Vector2( 988.194, 465.172 )
+[node name="Right" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 227.999, 385.716 )
+scale = Vector2( 0.6, 0.6 )
 normal = ExtResource( 11 )
+
+[node name="Jump" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 945.43, 110.349 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 15 )
+
+[node name="Fire" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 841.988, 298.836 )
+normal = ExtResource( 10 )
+
+[node name="Speeding" type="TouchScreenButton" parent="Hud/GamePad"]
+position = Vector2( 771.436, 182.294 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 16 )
 
 [node name="PlayQuit" parent="." instance=ExtResource( 12 )]
 position = Vector2( 162.768, 456.749 )
@@ -127,3 +141,8 @@ position = Vector2( 162.768, 456.749 )
 [connection signal="pressed" from="Hud/GamePad/Right" to="Player" method="_on_Right_pressed"]
 [connection signal="released" from="Hud/GamePad/Right" to="Player" method="_on_Right_released"]
 [connection signal="pressed" from="Hud/GamePad/Jump" to="Player" method="_on_Jump_pressed"]
+[connection signal="released" from="Hud/GamePad/Jump" to="Player" method="_on_Jump_released"]
+[connection signal="pressed" from="Hud/GamePad/Fire" to="Player" method="_on_Fire_pressed"]
+[connection signal="released" from="Hud/GamePad/Fire" to="Player" method="_on_Fire_released"]
+[connection signal="pressed" from="Hud/GamePad/Speeding" to="Player" method="_on_Speeding_pressed"]
+[connection signal="released" from="Hud/GamePad/Speeding" to="Player" method="_on_Speeding_released"]

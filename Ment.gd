@@ -35,7 +35,7 @@ func _on_Area2D_body_entered(body):
 	if is_alive && "Player" in body.name:
 		is_attacking = true
 		$AnimatedSprite.play("attack")
-		body.die()
+		body.lives -= 1
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "attack":
